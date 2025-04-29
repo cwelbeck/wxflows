@@ -1,0 +1,15 @@
+extend schema
+  @tool(
+    name: "wikipedia"
+    description: "Retrieve information from Wikipedia: {graphql_tool}"
+    graphql: [
+      {expose: true, types: "Query", fields: "search|page"}
+    ]
+  )
+  @tool(
+    name: "google_books"
+    description: "Retrieve information from Wikipedia: {graphql_tool}"
+    graphql: [
+      {expose: true, types: "Query", fields: "books|book"}
+    ]
+  )

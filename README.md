@@ -1,47 +1,18 @@
-# watsonx.ai Flows Engine
+# Model Context Protocol (MCP) with API Connect For GraphQL
 
-### Build, run & deploy Tools for AI Agents 🚀
+> [!IMPORTANT]  
+> The functionality to build tools out of existing data sources such as APIs and Databases from `watsonx.ai Flows Engine / wxflows` is now part of API Connect for GraphQL (formerly StepZen). If you previously signed up for Flow Engine you don't have to sign up again, your existing login credentials and API Key remain valid.
 
-With [watsonx.ai Flows Engine](https://ibm.biz/wxflows) you can build tools out of any data source, and deploy them to an endpoint in the cloud. Tools built with watsonx.ai Flows Engine can be used in any Agentic Framework using the SDK for Python & JavaScript.
+### Build, run & deploy MCP servers for AI Agents 🚀
 
-![building AI applications with watsonx.ai Flows Engine](https://github.com/user-attachments/assets/ee70c90b-1297-4cee-be28-37244b342ebd)
-
-**📹 [VIDEOS](https://www.youtube.com/playlist?list=PLzpeuWUENMK3jYU3Du7qEeeq3CeWm4jJV)** | **📝 [BLOGS](https://developer.ibm.com/search/?q=%22flows%20engine%22)** | **📗 [DOCUMENTATION](https://wxflows.ibm.stepzen.com/docs)** | **💬 [DISCORD](https://ibm.biz/wxflows-discord)** | **🆓 [FREE SIGNUP](https://ibm.biz/wxflows)**
-
-## Tools
-
-- [exchange](./tools/exchange/README.md)
-- [wikipedia](./tools/wikipedia/README.md)
-- [google_books](./tools/google_books/README.md)
-- [math](./tools/math/README.md)
-- [weather](./tools/weather/README.md)
-- ... see [all tools](./tools/README.md)
-
-❗ [**Build your own tool**](./tools/README.md) ❗
-
-## Integrations
-
-- [LangGraph](./examples/tool-calling/langgraph/)
-- [LangChain](./examples/tool-calling/langchain/)
-- [watsonx.ai](./examples/tool-calling/watsonx/)
-- [OpenAI](./examples/tool-calling/openai/)
+With [API Connect for GraphQL (](https://ibm.biz/wxflows) you can build GraphQL APIs & MCP servers out of any data source, and deploy them to an endpoint in the cloud. MCP servers built with API Connect for GraphQL can be used in any MCP client using the MCP protocol.
 
 ## Examples
 
 - [End-to-end Agent Chat App](./examples/chat-app/)
-- [Text-to-SQL Agent](./examples/text-to-sql-agent/)
-- [YouTube transciption agent](./examples/langgraph-youtube-agent/)
-- [Math agent](./examples/langgraph-math-agent/)
-- [Model Context Protocol (MCP)](./examples/mcp/)
-- [Tool Calling](./examples/tool-calling/)
-  - LangGraph
-    - [JavaScript](./examples/tool-calling/langgraph/javascript)
-  - LangChain
-    - [JavaScript](./examples/tool-calling/langchain/javascript)
-  - [watsonx.ai](./examples/tool-calling/watsonx/)
-  - [OpenAI](./examples/tool-calling/openai/)
-- [RAG](./examples/rag-question-answer/)
-- [Summarization](./examples/webpage-summarization/)
+
+> [!WARNING]  
+> If you previously built a RAG flow using `watsonx.ai Flows Engine / wxflows` we recommend to use [IBM watsonx Auto-AI RAG](https://www.youtube.com/watch?v=oWWD2wvO4w4) instead.
 
 ## Support
 

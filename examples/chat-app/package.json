@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "run": "node src/app/lib/langgraph.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -10,13 +11,13 @@
   },
   "dependencies": {
     "@carbon/ai-chat": "^0.1.4-rc1",
-    "@langchain/community": "^0.3.14",
-    "@langchain/core": "^0.3.18",
-    "@langchain/langgraph": "^0.2.20",
-    "@wxflows/sdk": "^0.2.0-beta.6",
-    "i": "^0.3.7",
+    "@dmitryrechkin/json-schema-to-zod": "^1.0.1",
+    "@langchain/community": "^0.3.41",
+    "@langchain/core": "^0.3.48",
+    "@langchain/langgraph": "^0.2.65",
+    "@langchain/mcp-adapters": "^0.4.2",
+    "@remote-mcp/client": "^0.1.0",
     "next": "15.0.3",
-    "npm": "^10.9.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

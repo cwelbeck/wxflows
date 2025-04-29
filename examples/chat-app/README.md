@@ -1,19 +1,21 @@
-# Using watsonx.ai Flows Engine in a Chat Application
+# Build a Chat Application with MCP (Model Context Protocol) using API Connect for GraphQL and watsonx.ai
 
-Here's a step-by-step tutorial for setting up and deploying an AI Agent with `wxflows` and LangGraph, including installing necessary tools, deploying the app, and running it locally.
+> The functionality to build tools out of existing data sources such as APIs and Databases from `watsonx.ai Flows Engine / wxflows` is now part of API Connect for GraphQL (formerly StepZen). If you previously signed up for Flow Engine you don't have to sign up again, your existing login credentials and API Key remain valid.
 
-![diagram](../../assets/wxflows-langgraph-carbon.png)
+Here's a step-by-step tutorial for setting up and deploying an AI Agent that leverages Model Context Protocol (MCP) for tools with [API Connect for GraphQL (formerly StepZen)](https://dashboard.ibm.stepzen.com/) and LangGraph, including installing necessary dependencies, deploying the app, and running it locally.
+
+![diagram](../../assets/apicgraphql-langgraph-carbon.png)
 
 This example consists of the following pieces:
 
 - LangGraph SDK (agent)
 - watsonx.ai (models)
-- wxflows SDK (tools)
+- API Connect For GraphQL (MCP server / tools)
 - Carbon AI Chat (user interface)
 
 > You can use any of the [supported chat models](https://js.langchain.com/docs/integrations/chat/).
 
-This guide will walk you through installing the `wxflows` CLI, initializing and deploying a project, and running the application locally. We’ll use `google_books` and `wikipedia` tools as examples for tool calling with `wxflows`.
+This guide will walk you through installing the API Connect for GraphQL CLI, initializing and deploying a project, and running the application locally. We’ll use API Connect for GraphQL and deploy it as a MCP server, that has two tools: `google_books` and `wikipedia`.
 
 ## Before you start
 
@@ -24,23 +26,36 @@ git clone https://github.com/IBM/wxflows.git
 cd examples/chat-app
 ```
 
-## Step 1: Set up wxflows
+## Step 1: Set up API Connect for GraphQL 
 
-Before you can start building AI applications using watsonx.ai Flows Engine:
+Before you can start building a MCP server using API Connect for GraphQL:
 
-1. [Sign up](https://ibm.biz/wxflows) for a free account
-2. [Download & install](https://wxflows.ibm.stepzen.com/docs/installation) the Node.js CLI
-3. [Authenticate](https://wxflows.ibm.stepzen.com/docs/authentication) your account
+1. [Sign up](https://dashboard.ibm.stepzen.com/) for a free account.
+2. [Download & install](https://www.ibm.com/docs/en/api-connect-graphql/saas?topic=setting-up-your-environment) the Node.js CLI:
 
-## Step 2: Deploy a Flows Engine project
+    ```bash
+    npm install -g stepzen
+    ```
 
-Move into the `wxflows` directory:
+3. [Authenticate](https://wxflows.ibm.stepzen.com/docs/authentication) your account:
+
+    ```bash
+    stepzen login
+    ```
+
+> You can also [use API Connect for GraphQL locally](https://www.ibm.com/docs/en/api-connect-graphql/saas?topic=environment-using-docker-local-api-development) by using Docker.
+
+## Step 2: Deploy a MCP server
+
+Move into the `stepzen` directory:
 
 ```bash
-cd wxflows
+cd stepzen
 ```
 
-There's already a wxflows project for you set up this repository with the following values:
+> API Connect for GraphQL was previously named StepZen, therefore some of the dependences still mention `stepzen`.
+
+There's already a project for you set up this repository with the following values:
 
 - **Defines an endpoint** `api/chat-app-example` for the project.
 - **Imports `google_books` tool** with a description for searching books and specifying fields `books|book`.
@@ -49,10 +64,10 @@ There's already a wxflows project for you set up this repository with the follow
 You can deploy this tool configuration to a Flows Engine endpoint by running:
 
 ```bash
-wxflows deploy
+stepzen deploy
 ```
 
-This command deploys the endpoint and tools defined, these will be used by the `wxflows` SDK in your application.
+This command deploys the endpoint and tools defined as a MCP server.
 
 ## Step 3: Install Dependencies in the Application
 
@@ -63,7 +78,7 @@ cd ../
 npm i
 ```
 
-This command installs all required packages, including the `@wxflows/sdk` package and any dependencies specified in the project.
+This command installs all required packages, including LangChain/LangGraph and any dependencies specified in the project.
 
 ## Step 4: Set Up Environment Variables
 
@@ -83,8 +98,8 @@ Finally, start the application by running:
 npm run dev
 ```
 
-This command initiates your application, allowing you to call and test the `google_books` and `wikipedia` tools through `wxflows`.
+This command initiates your application, allowing you to call and test the `google_books` and `wikipedia` tools through the MCP server.
 
 ## Summary
 
-You’ve now successfully set up, deployed, and run a `wxflows` project with `google_books` and `wikipedia` tools. This setup provides a flexible environment to leverage external tools for data retrieval, allowing you to further build and expand your app with `wxflows`. See the instructions in [tools](../../tools/README.md) to add more tools or create your own tools from Databases, NoSQL, REST or GraphQL APIs.
+You’ve now successfully set up, deployed, and run a chat application that leverages API Connect for GraphQL as a MCP server with the `google_books` and `wikipedia` tools. This setup provides a flexible environment to leverage external tools for data retrieval, allowing you to further build and expand your application. See the instructions in [tools](../../tools/README.md) to add more tools or create your own tools from Databases, NoSQL, REST or GraphQL APIs.
