@@ -1,0 +1,8 @@
+extend schema
+  @tool(
+    name: "youtube_transcript"
+    description: "Retrieve transcripts for a given YouTube video. The videoUrl should be in the format 'https://www.youtube.com/watch?v=VIDEO_ID'. {graphql_tool}"
+    graphql: [
+      {expose: true, types: "Query", fields: "transcript"}
+    ]
+  )

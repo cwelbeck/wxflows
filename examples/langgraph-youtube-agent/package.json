@@ -9,14 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dmitryrechkin/json-schema-to-zod": "^1.0.1",
     "@langchain/core": "^0.3.33",
     "@langchain/langgraph": "^0.2.41",
+    "@langchain/mcp-adapters": "^0.4.2",
     "@langchain/ollama": "^0.1.4",
-    "@wxflows/sdk": "^0.2.0-beta.6",
     "next": "15.1.6",
-    "playwright": "^1.50.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "zod-to-json-schema": "^3.24.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

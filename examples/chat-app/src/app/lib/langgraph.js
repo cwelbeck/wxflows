@@ -55,13 +55,16 @@ export async function submitQuestion(messages) {
     const tools = mcpTools.map((mcpTool) => {
       const schema = JSONSchemaToZod.convert(mcpTool.schema);
 
+console.log('ZOD schema', JSON.stringify(schema))
+
+
       if (mcpTool.schema.properties?.query?.description) {
         graphqlExecutableSchema = `${graphqlExecutableSchema}
         
         Use the following GraphQL schema for "${mcpTool.name}":
         ${mcpTool.schema.properties?.query?.description}`;
       }
-      
+
       return tool(mcpTool.func, {
         name: mcpTool.name,
         description: mcpTool.description,

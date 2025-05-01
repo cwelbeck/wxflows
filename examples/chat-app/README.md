@@ -1,6 +1,7 @@
 # Build a Chat Application with MCP (Model Context Protocol) using API Connect for GraphQL and watsonx.ai
 
-> The functionality to build tools out of existing data sources such as APIs and Databases from `watsonx.ai Flows Engine / wxflows` is now part of API Connect for GraphQL (formerly StepZen). If you previously signed up for Flow Engine you don't have to sign up again, your existing login credentials and API Key remain valid.
+> [!IMPORTANT]  
+> The functionality to build tools out of existing data sources such as APIs and Databases from `watsonx.ai Flows Engine / wxflows` is now part of API Connect for GraphQL (formerly StepZen). If you previously signed up for Flow Engine you don't have to sign up again, **your existing login credentials and API Key remain valid**.
 
 Here's a step-by-step tutorial for setting up and deploying an AI Agent that leverages Model Context Protocol (MCP) for tools with [API Connect for GraphQL (formerly StepZen)](https://dashboard.ibm.stepzen.com/) and LangGraph, including installing necessary dependencies, deploying the app, and running it locally.
 
@@ -26,22 +27,22 @@ git clone https://github.com/IBM/wxflows.git
 cd examples/chat-app
 ```
 
-## Step 1: Set up API Connect for GraphQL 
+## Step 1: Set up API Connect for GraphQL
 
 Before you can start building a MCP server using API Connect for GraphQL:
 
 1. [Sign up](https://dashboard.ibm.stepzen.com/) for a free account.
 2. [Download & install](https://www.ibm.com/docs/en/api-connect-graphql/saas?topic=setting-up-your-environment) the Node.js CLI:
 
-    ```bash
-    npm install -g stepzen
-    ```
+   ```bash
+   npm install -g stepzen
+   ```
 
 3. [Authenticate](https://wxflows.ibm.stepzen.com/docs/authentication) your account:
 
-    ```bash
-    stepzen login
-    ```
+   ```bash
+   stepzen login
+   ```
 
 > You can also [use API Connect for GraphQL locally](https://www.ibm.com/docs/en/api-connect-graphql/saas?topic=environment-using-docker-local-api-development) by using Docker.
 
@@ -61,7 +62,7 @@ There's already a project for you set up this repository with the following valu
 - **Imports `google_books` tool** with a description for searching books and specifying fields `books|book`.
 - **Imports `wikipedia` tool** with a description for Wikipedia searches and specifying fields `search|page`.
 
-You can deploy this tool configuration to a Flows Engine endpoint by running:
+You can deploy this tool configuration to a MCP compliant endpoint by running:
 
 ```bash
 stepzen deploy
@@ -102,4 +103,4 @@ This command initiates your application, allowing you to call and test the `goog
 
 ## Summary
 
-You’ve now successfully set up, deployed, and run a chat application that leverages API Connect for GraphQL as a MCP server with the `google_books` and `wikipedia` tools. This setup provides a flexible environment to leverage external tools for data retrieval, allowing you to further build and expand your application. See the instructions in [tools](../../tools/README.md) to add more tools or create your own tools from Databases, NoSQL, REST or GraphQL APIs.
+You’ve now successfully set up, deployed, and run a chat application that leverages API Connect for GraphQL as a MCP server with the `google_books` and `wikipedia` tools. This setup provides a flexible environment to leverage external tools for data retrieval, allowing you to further build and expand your application. See [API Connect for GraphQL (formerly StepZen)](https://dashboard.ibm.stepzen.com/) to add more tools to your MCP server or create your own MCP servers from Databases, NoSQL, REST or GraphQL APIs.

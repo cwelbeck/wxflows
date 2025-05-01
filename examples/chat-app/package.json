@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@carbon/ai-chat": "^0.1.4-rc1",
-    "@dmitryrechkin/json-schema-to-zod": "^1.0.1",
     "@langchain/community": "^0.3.41",
     "@langchain/core": "^0.3.48",
     "@langchain/langgraph": "^0.2.65",
