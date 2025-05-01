@@ -10,6 +10,8 @@ With [API Connect for GraphQL (](https://dashboard.ibm.stepzen.com/) you can bui
 ## Examples
 
 - [End-to-end Agent Chat App](./examples/chat-app/)
+- [YouTube Transcription Agent](./examples/langgraph-youtube-agent/)
+- [Text-to-SQL Agent](./examples/text-to-sql-agent/)
 - [Archived wxflows examples](https://github.com/IBM/wxflows/tree/archived/examples)
 
 > [!WARNING]  
