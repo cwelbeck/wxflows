@@ -1,3 +1,0 @@
-schema @sdl(files: ["youtube_transcript/index.graphql", "tools.graphql"]) {
-  query: Query
-}
